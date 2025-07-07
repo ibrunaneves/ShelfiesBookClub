@@ -16,12 +16,9 @@
       integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="./style.css" />
   </head>
 
   <body>
-    <!-- Nav bar -->
-
     <nav class="navbar navbar-expand-lg bg-body-tertiary shadow-sm">
       <div class="container-fluid">
         <a class="navbar-brand" href="#">
@@ -63,36 +60,40 @@
       </div>
     </nav>
 
-    <!-- Carousel -->
-
     <div
       id="carouselExampleAutoplaying"
       class="carousel slide"
       data-bs-ride="carousel"
+      data-bs-interval="4000"
     >
       <div class="carousel-inner">
         <div class="carousel-item active">
-          <img
-            src="./assets/Desktop/1.png"
-            class="d-block w-100"
-            alt="Logo shelfies book club"
-          />
+          <picture>
+            <source media="(max-width: 576px)" srcset="./assets/Mobile/1.png" />
+            <source media="(max-width: 992px)" srcset="./assets/Tablet/1.png" />
+            <img src="./assets/Desktop/1.png" class="d-block w-100" alt="Slide 1" />
+          </picture>
         </div>
         <div class="carousel-item">
-          <img
-            src="./assets/Desktop/2.png"
-            class="d-block w-100"
-            alt="6 meninas em um dos encontros"
-          />
+          <picture>
+            <source media="(max-width: 576px)" srcset="./assets/Mobile/2.png" />
+            <source media="(max-width: 992px)" srcset="./assets/Tablet/2.png" />
+            <img src="./assets/Desktop/2.png" class="d-block w-100" alt="Slide 2" />
+          </picture>
         </div>
         <div class="carousel-item">
-          <img
-            src="./assets/Desktop/3.png"
-            class="d-block w-100"
-            alt="Meninas num encontro em um café segurando kindles"
-          />
+          <picture>
+            <source media="(max-width: 576px)" srcset="./assets/Mobile/3.png" />
+            <source media="(max-width: 992px)" srcset="./assets/Tablet/3.png" />
+            <img
+              src="./assets/Desktop/3.png"
+              class="d-block w-100"
+              alt="Slide 3"
+            />
+          </picture>
         </div>
       </div>
+
       <button
         class="carousel-control-prev"
         type="button"
@@ -102,6 +103,7 @@
         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
         <span class="visually-hidden">Previous</span>
       </button>
+
       <button
         class="carousel-control-next"
         type="button"
@@ -113,11 +115,11 @@
       </button>
     </div>
 
-    <!-- Grid com imagem -->
-
     <div class="container py-5">
-      <div class="row align-items-center">
-        <div class="col-md-6">
+      <div
+        class="row align-items-center justify-content-center text-center text-md-start"
+      >
+        <div class="col-12 col-md-6 mb-4 mb-md-0">
           <h2 class="fw-bold">Sobre o Shelfies Book Club</h2>
           <p>
             O Shelfies é mais que um clube de leitura! É um espaço seguro e
@@ -127,17 +129,15 @@
             pouco: aqui, cada página conta.
           </p>
         </div>
-        <div class="col-md-6 text-center">
+        <div class="col-12 col-md-6 text-center">
           <img
             src="./assets/adms.png"
-            class="img-fluid w-75"
+            class="img-fluid w-75 mx-auto d-block"
             alt="Ilustração do clube"
           />
         </div>
       </div>
     </div>
-
-    <!-- Cards de livros -->
 
     <div class="container py-5 text-center">
       <h2 class="fw-bold mb-4">Últimas leituras</h2>
@@ -150,6 +150,7 @@
               alt="Capa do livro Recursão"
             />
             <div class="card-body">
+              <h2>Recursão</h2>
               <p class="card-text">
                 Memórias de vidas que nunca existiram começam a invadir a mente
                 das pessoas, distorcendo a realidade e levando à loucura.
@@ -172,6 +173,7 @@
               alt="Capa do livro Casas Estranhas"
             />
             <div class="card-body">
+              <h2>Casas Estranhas</h2>
               <p class="card-text">
                 Ao investigar uma casa com um espaço misterioso entre a cozinha
                 e a sala, um escritor e um arquiteto descobrem segredos
@@ -194,6 +196,7 @@
               alt="Capa do livro Amor, teoricamente"
             />
             <div class="card-body">
+              <h2>Amor, Teoricamente</h2>
               <p class="card-text">
                 Elsie Hannaway leva uma vida dupla: professora de física durante
                 o dia e namorada de mentira nas horas vagas. Tudo parece sob
@@ -215,6 +218,7 @@
               alt="Capa do livro O massacre da família Hope"
             />
             <div class="card-body">
+              <h2>O Massacre da Família Hope</h2>
               <p class="card-text">
                 Em 1929, a rica família Hope foi assassinada em sua mansão no
                 Maine, restando apenas a filha Lenora, que se tornou a principal
@@ -230,8 +234,6 @@
         </div>
       </div>
     </div>
-
-    <!-- Últimos encontros -->
 
     <div class="container py-5 text-center">
       <h2 class="fw-bold mb-4">Últimos encontros</h2>
@@ -264,8 +266,6 @@
         </div>
       </div>
     </div>
-
-    <!-- Footer -->
 
     <footer class="bg-light py-5 mt-5">
       <div class="container">
